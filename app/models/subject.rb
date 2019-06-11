@@ -1,4 +1,4 @@
 class Subject < ApplicationRecord
   belongs_to :course
-  has_many :task
+  has_many :tasks, dependent: :destroy
 end
