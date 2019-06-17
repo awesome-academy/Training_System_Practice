@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require_tree .
 //= require jquery
+//= require bootstrap
 //= require js/custom.js
 //= require js/jquery.collapsible.min.js
 //= require js/jquery.js
