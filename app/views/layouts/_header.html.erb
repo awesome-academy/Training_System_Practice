@@ -29,10 +29,14 @@
 
               <div class="header-bar-menu">
                 <ul class="flex justify-content-center align-items-center py-2 pt-md-0">
-                  <li><a href="#"><%= t ".register" %></a>
-                  </li>
-                  <li><a href="#"><%= t ".login" %></a>
-                  </li>
+                  <% if logged_in? %>
+                    <li><%= link_to t(".user"), users_path %></li>
+                      /
+                    <%= link_to t(".logout"), logout_path, method: :delete %>
+                  <% else %>
+                    <li><%= link_to t(".register"),signup_path %></li>
+                    <li><%= link_to t(".login"), login_path %></li>
+                  <% end %>
                 </ul>
               </div>
               <!-- .header-bar-menu -->
