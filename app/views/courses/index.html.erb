@@ -1,36 +1,56 @@
-<h1 class="entry-title">Courses</h1>
-<% @courses.each do |course| %>
-<div class="col-12 col-md-6 col-lg-4 px-25">
-  <div class="course-content">
-    <figure class="course-thumbnail">
-      <a href="#">
-        <%=image_tag( "images/2.jpg" ) %>
-      </a>
-    </figure>
-    <!-- .course-thumbnail -->
-    <div class="course-content-wrap">
-      <header class="entry-header">
-        <h2 class="entry-title"><%= link_to course.name, course %></h2>
+<section class="featured-courses vertical-column courses-wrap">
+    <div class="container">
+        <div class="row mx-m-25">
+            <div class="col-12 px-25">
+                <header class="heading flex flex-wrap justify-content-between align-items-center">
+                    <h2 class="entry-title"><%=t(".course")%></h2>
+                    <!-- .courses-menu -->
+                </header>
+                <!-- .heading -->
+            </div>
+            <!-- .col -->
 
-        <div class="entry-meta flex align-items-center">
-          <div class="course-author"><a href="#">Michelle Golden</a>
-          </div>
+            <% @courses.each do |course| %>
+            <!-- .col -->
+            <div class="col-12 col-md-6 col-lg-4 px-25">
+                <div class="course-content">
+                    <figure class="course-thumbnail">
+                        <a href="#">
+                            <%=image_tag( "images/3.jpg" ) %>
+                        </a>
+                    </figure>
+                    <!-- .course-thumbnail -->
 
-          <div class="course-date">Mar 14, 2018</div>
+                    <div class="course-content-wrap">
+                        <header class="entry-header">
+                            <h2 class="entry-title"><%= link_to course.name, t(".course") %></h2>
+
+                            <div class="entry-meta flex align-items-center">
+                                <div class="course-author"><a href="#"><%=t(".name_co")%></a>
+                                </div>
+
+                                <div class="course-date"><%= course.start_date %></div>
+                            </div>
+                            <!-- .course-date -->
+                        </header>
+
+                    </div>
+                    <!-- .course-content-wrap -->
+                </div>
+                <!-- .course-content -->
+            </div>
+            <!-- .col -->
+            <% end %>
+            <%= will_paginate %>
+             <!--
+            <div class="col-12 px-25 flex justify-content-center">
+                <a class="btn" href="#">view all courses</a>
+            </div>
+            -->
+            <!-- .col -->
         </div>
-        <!-- .course-date -->
-      </header>
-      <!-- .entry-header -->
+        <!-- .row -->
     </div>
-    <!-- .course-content-wrap -->
-  </div>
-  <!-- .course-content -->
-</div>
-<% end %>
-<!-- .col -->
-<div class="col-12 px-25 flex justify-content-center">
-<!--
-<a class="btn" href="#">view all courses</a>
--->
-</div>
-
+    <!-- .container -->
+</section>
+<!-- .courses-wrap -->

@@ -31,6 +31,7 @@
 en:
   hello: "TrainingSystemPractice"
   user_not_found : " User not found"
+  noone : "No have any thing!"
   message:
     msg1: "Hello "
     msg2: "Invalid email/password combination"
@@ -85,3 +86,6 @@ en:
       str1: "Sign up now!"
       str2: "New user?"
       remember: "Remember me on this computer"
+  courses:
+    index:
+      name_co: "Michelle Golden"
